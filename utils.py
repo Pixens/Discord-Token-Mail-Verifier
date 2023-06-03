@@ -1,4 +1,4 @@
-import secrets, random, requests, yaml, threading, time
+import secrets, random, requests, yaml, threading, time, tempfile, fileinput
 from log import *
 
 config = yaml.safe_load(open('config.yml', "r"))
