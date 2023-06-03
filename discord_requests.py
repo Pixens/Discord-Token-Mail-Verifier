@@ -22,7 +22,6 @@ def claim(old_fulltoken):
                 'email': mail,
                 'password': password
             }
-            
             session = generate_session(token)
             resp = session.patch('https://discord.com/api/v9/users/@me', json = payload)
             if resp.status_code == 200:
@@ -38,7 +37,7 @@ def claim(old_fulltoken):
                 return
             
         except Exception as e: 
-            continue
+            print(e)
         
     debug(f'Failed to claim token | {token}')
     cancel_mail(mail_id)
