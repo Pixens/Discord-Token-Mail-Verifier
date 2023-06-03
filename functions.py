@@ -13,5 +13,5 @@ def verify():
                 futures.append(executor.submit(claim, old_fulltoken))
     e = time.time()
                 
-    info(f'Threads finished. Time taken: {round(e-s, 3)}')    
+    info(f'Threads finished. Time taken: {round(e-s, 3)}s')    
     
