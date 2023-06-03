@@ -1,0 +1,7 @@
+pyyaml
+tls_client
+httpx
+colorama
+ctypes
+secrets
+requests
