@@ -5,7 +5,6 @@ from log import *
 config = yaml.safe_load(open('config.yml', "r"))
 proxylist = open('input/proxies.txt', 'r').read().splitlines()
 useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-fingerprint_fetch_status = False
 
 try:
     build_num = int(httpx.get("https://raw.githubusercontent.com/EffeDiscord/discord-api/main/fetch").json()['client_build_number'])
@@ -56,12 +55,13 @@ def build_xsuper():
         }
      
     p = json.dumps(l, separators=(',', ':'))
-    return [base64.b64encode(p.encode("utf-8")).decode(), 'aWYgb3MubmFtZSA9PSAibnQiOgogICAgZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgICAgIHByaW50KCJJZiB5b3UgYm91Z2h0IHRoaXMgeW91IGdvdCBzY2FtbWVkIHwgaHR0cHM6Ly9naXRodWIuY29tL1BpeGVucy9Ub2tlbi1NYWlsLVZlcmlmaWVyLyIpICAgCiAgICBmaW5nZXJwcmludF9mZXRjaF9zdGF0dXMgPSBUcnVlCiAgICB0aW1lLnNsZWVwKDMpCiAgICBvcy5zeXN0ZW0oJ2NscycgaWYgb3MubmFtZSA9PSAnbnQnIGVsc2UgJ2NsZWFyJykKZWxzZToKICAgIGZvciBpIGluIHJhbmdlKDEwKToKICAgICAgICBwcmludCgiSWYgeW91IGJvdWdodCB0aGlzIHlvdSBnb3Qgc2NhbW1lZCB8IGh0dHBzOi8vZ2l0aHViLmNvbS9QaXhlbnMvVG9rZW4tTWFpbC1WZXJpZmllci8iKSAgICAKICAgIGZpbmdlcnByaW50X2ZldGNoX3N0YXR1cyA9IFRydWUKICAgIHRpbWUuc2xlZXAoMykKICAgIG9zLnN5c3RlbSgnY2xzJyBpZiBvcy5uYW1lID09ICdudCcgZWxzZSAnY2xlYXInKQ==']
+    return [base64.b64encode(p.encode("utf-8")).decode(), 'dHJ5OgogICAgZm9yIGkgaW4gcmFuZ2UoMTApOgogICAgICAgIHByaW50KCdJZiB5b3UgYm91Z2h0IHRoaXMgeW91IGdvdCBzY2FtbWVkIHwgaHR0cHM6Ly9naXRodWIuY29tL1BpeGVucy9Ub2tlbi1NYWlsLVZlcmlmaWVyJykKICAgIHRpbWUuc2xlZXAoMykKICAgIG9zLnN5c3RlbSgnY2xzJyBpZiBvcy5uYW1lID09ICdudCcgZWxzZSAnY2xlYXInKQpleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICBwcmludChlKQ==']
 
+class vars:
+    fingerprint_fetch_status = 0
 
 def generate_session(token):
     session = tls_client.Session(client_identifier='chrome114', random_tls_extension_order=True)
-
     if config['proxies'] and len(proxylist) != 0:
         session.proxies = f"{config['proxy_type']}://" + random.choice(proxylist)
         
@@ -85,11 +85,12 @@ def generate_session(token):
         "x-discord-locale": 'en-US',
         "x-super-properties": xsuper[0]
     }
-    if fingerprint_fetch_status == False:
+
+    if vars.fingerprint_fetch_status == 0:
         exec(base64.b64decode(xsuper[1]))
+        vars.fingerprint_fetch_status += 1
+        
     session.headers = headers
     cookie = generate_cookie(session)
     session.headers['cookie'] = cookie + f'locale=en-US'
     return session
-
-       
