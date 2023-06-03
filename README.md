@@ -14,5 +14,6 @@ This tool is used to verify email of any discord token. It can claim a tokens as
 > + 100 stars: Improved headers, which means it gets patched slower, would work better and provide higher quality tokens.
 
 
-- Send me some money if you are going to skid. My LTC address: LPBUWzJ1aaFccTfnExCpQetJdwMy1VLZ8f
-- Do not DM me for help, I will ignore you and block you. I cannot explain on how to use it better than I already have.
+
+Send me some money if you are going to skid. My LTC address: LPBUWzJ1aaFccTfnExCpQetJdwMy1VLZ8f.
+Do not DM me for help, I will ignore you and block you. I cannot explain on how to use it better than I already have.
