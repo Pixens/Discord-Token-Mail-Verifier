@@ -32,9 +32,9 @@ def get_mail():
     if 'OK' in resp.text:
         return resp.json()['mail'], resp.json()['id']
     elif 'ERROR' in resp.text:
-        if r.json()['value'] == 'OUT_OF_STOCK':
+        if resp.json()['value'] == 'OUT_OF_STOCK':
             error('Email is out of stock! Saved as unclaimed.')
-        if r.json()['value'] == 'BAD_BALANCE':
+        if resp.json()['value'] == 'BAD_BALANCE':
             error('Not enough balance on kopeechka anymore! Saved as unclaimed.')
             
     return None, None
