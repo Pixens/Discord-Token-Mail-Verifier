@@ -1,7 +1,8 @@
+import logging
 from colorama import Fore, Style
-import os
 
-os.system("")
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 def info(content):
@@ -10,12 +11,14 @@ def info(content):
     else:
         level = '[+]'
     message = f'{Fore.GREEN}{Style.BRIGHT}{level}{Style.RESET_ALL} {Fore.RESET}{content}{Fore.RESET}'
-    print(message)
-    
+    logging.info(message)
+
+
 def debug(content):
     message = f'{Fore.YELLOW}{Style.BRIGHT}[-]{Style.RESET_ALL} {Fore.RESET}{content}{Fore.RESET}'
-    print(message)
-    
+    logging.debug(message)
+
+
 def error(content):
     message = f'{Fore.RED}{Style.BRIGHT}[!]{Style.RESET_ALL} {Fore.RESET}{content}{Fore.RESET}'
-    print(message)
+    logging.error(message)
