@@ -8,16 +8,15 @@ def generate_password():
     return secrets.token_hex(16)
 
 
-def remove(content_to_remove, file_path):
-    temp_file = tempfile.NamedTemporaryFile(mode='w', delete=False)
+def remove(content, filename):
+    lock = threading.Lock()
 
-    with open(file_path, 'r') as file:
-        for line in file:
-            if not any(remove_content in line for remove_content in content_to_remove):
-                temp_file.write(line)
-                
-    temp_file.close()
-    os.replace(temp_file.name, file_path) 
+    with lock:
+        with open(filename, 'r') as file:
+            lines = file.readlines()
+        lines = [line for line in lines if content not in line]
+        with open(filename, 'w') as file:
+            file.writelines(lines)
             
             
 def write(line, filename):
