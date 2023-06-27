@@ -19,9 +19,11 @@ def remove(content, filename):
             file.writelines(lines)
             
             
-def write(line, filename):
-    with open(filename, 'a') as f:
-        f.write(line + '\n')
+def write(content, filename):
+    file_lock = threading.Lock()
+    with file_lock:
+        with open(file_path, 'a') as file:
+            file.write(f'{content}\n')
 
 
 def get_mail():
