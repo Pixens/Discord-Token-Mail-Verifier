@@ -22,7 +22,7 @@ def remove(content, filename):
 def write(content, filename):
     file_lock = threading.Lock()
     with file_lock:
-        with open(file_path, 'a') as file:
+        with open(filename, 'a') as file:
             file.write(f'{content}\n')
 
 
