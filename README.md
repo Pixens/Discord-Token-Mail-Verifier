@@ -1,6 +1,7 @@
 # Discord Token Mail Verifier
 This tool is used to verify email of any discord token. It can claim a tokens as well.
 
+NOT WORKING RIGHT NOW, FIX AT 60 stars
 
 ## How To Run?
 > 1) Clone / download this repository.
