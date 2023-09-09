@@ -1,3 +1,12 @@
+<div id="top"></div>
+<p align="center">
+  <img src="https://img.shields.io/github/contributors/Pixens/Discord-Token-Mail-Verifier.svg?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/forks/Pixens/Discord-Token-Mail-Verifier.svg?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/stars/Pixens/Discord-Token-Mail-Verifier.svg?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/issues/Pixens/Discord-Token-Mail-Verifier.svg?style=for-the-badge"/>
+  <img src="https://img.shields.io/github/license/Pixens/Discord-Token-Mail-Verifier.svg?style=for-the-badge"/>
+</p>
+---------------------------------------
 # Discord Token Mail Verifier | https://boostup.cc
 This tool is used to verify email of any discord token. It can claim a tokens as well.
 
