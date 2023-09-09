@@ -13,7 +13,6 @@ NOT WORKING RIGHT NOW, FIX AT 60 stars
 
 
 ## Planned
-> + 60 stars: Add retries.
 > + 100 stars: Improved headers, which means it gets patched slower, would work better and provide higher quality tokens.
 
 
