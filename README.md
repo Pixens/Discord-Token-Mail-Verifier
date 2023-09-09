@@ -20,7 +20,7 @@ This tool is used to verify email of any discord token. It can claim a tokens as
 
 ## Planned
 > + 100 stars: Improved headers, which means it gets patched slower, would work better and provide higher quality tokens.
-
+> + 200 stars: Add support for custom emails, with the ability to create full access discord accounts.
 
 
 Send me some money if you are going to skid. My LTC address: LPBUWzJ1aaFccTfnExCpQetJdwMy1VLZ8f.
