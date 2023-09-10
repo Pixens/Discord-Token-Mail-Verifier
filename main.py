@@ -142,6 +142,7 @@ class Discord:
             added = self.add_email(response.mail)
             if added:
                 verification_token = KopcheekaApi.get_verification_token(response.id)
+                self.session.headers.update({'Authorization': self.token})
                 self.verify_email(verification_token)
         except Exception as e:
             Logger.error(f'{str(e)} | {self.token}')
