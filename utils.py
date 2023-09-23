@@ -77,10 +77,12 @@ class Utils:
 
 
 class Logger:
+    @staticmethod
     def info(content):
         message = f'{Fore.GREEN}{Style.BRIGHT}[+]{Style.RESET_ALL} {Fore.RESET}{content}{Fore.RESET}'
         print(message)
-        
+
+    @staticmethod
     def error(content):
         message = f'{Fore.RED}{Style.BRIGHT}[!]{Style.RESET_ALL} {Fore.RESET}{content}{Fore.RESET}'
         print(message)
