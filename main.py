@@ -59,7 +59,7 @@ class Discord:
             "device": "",
             "system_locale": 'en-GB',
             "browser_user_agent": self.user_agent,
-            "browser_version": '116.0.0.0',
+            "browser_version": '117.0.0.0',
             "os_version": "10",
             "referrer": "https://discord.com",
             "referring_domain": "discord.com",
