@@ -1,5 +1,5 @@
 # Discord Token Mail Verifier | https://boostup.cc
-This tool is used to verify email of any discord token. It can claim a tokens as well.
+This tool is used to verify email of any discord token. It can claim unclaimed tokens as well.
 
 <div id="top"></div>
 <p align="left">
