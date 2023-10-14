@@ -22,9 +22,9 @@ class Discord:
     def __init__(self):
         self.fulltoken = next(__tokens__)
         self.token = self.fulltoken.split(':')[-1]
-        self.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'
+        self.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36'
         self.session = tls_client.Session(
-            client_identifier='chrome_117',
+            client_identifier='chrome_118',
             random_tls_extension_order=True
         )
         self.cookies = ''
