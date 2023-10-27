@@ -67,13 +67,15 @@ class Utils:
     
     @staticmethod
     def get_build_number():
-        #Taken from https://github.com/Sysys242/
-        res = httpx.get("https://discord.com/login").text 
-        file_with_build_num = 'https://discord.com/assets/' + \
-        re.compile(r'assets/+([a-z0-9]+)\.js').findall(res)[-2]+'.js'
-        req_file_build = httpx.get(file_with_build_num).text
-        index_of_build_num = req_file_build.find('buildNumber')+24
-        return int(req_file_build[index_of_build_num:index_of_build_num+6])
+        build_number = 240884
+        try:
+            build_number_response = requests.get('https://raw.githubusercontent.com/Pixens/Discord-Build-Number/main/discord.json')
+            if build_number_response.status_code == 200:
+                build_number = build_number_response.json().get('build_number')
+        except Exception:
+            pass
+
+        return build_number
 
 
 class Logger:
