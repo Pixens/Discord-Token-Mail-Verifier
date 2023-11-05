@@ -37,7 +37,7 @@ class Discord:
             "Cookie": self.cookies,
             "Origin": "https://discord.com",
             "Referer": "https://discord.com/channels/@me",
-            "Sec-Ch-Ua": '"Not.A/Brand";v="24", "Chromium";v="118", "Google Chrome";v="118"',
+            "Sec-Ch-Ua": '"Not.A/Brand";v="24", "Chromium";v="119", "Google Chrome";v="119"',
             "Sec-Ch-Ua-Mobile": "?0",
             "Sec-Ch-Ua-Platform": "Windows",
             "Sec-Fetch-Dest": "empty",
