@@ -1,4 +1,4 @@
-# Discord Token Mail Verifier | https://boostup.cc
+# Discord Token Mail Verifier | Buy 100x better version at https://boostup.cc
 
 100 stars for fix
 
