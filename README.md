@@ -1,6 +1,6 @@
 # Discord Token Mail Verifier | Buy 100x better version at https://boostup.cc
 
-100 stars for fix
+# 100 stars for fix
 
 This tool is used to verify email of any discord token. It can claim unclaimed tokens as well.
 
