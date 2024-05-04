@@ -26,5 +26,9 @@ This tool is used to verify email of any discord token. It can claim unclaimed t
 > + 200 stars: Add support for custom emails, with the ability to create full access discord accounts.
 
 
-Send me some money if you are going to skid. My LTC address: LPBUWzJ1aaFccTfnExCpQetJdwMy1VLZ8f.
+# Disclaimer
+
+This is intended for educational purposes only. The creator assumes no responsibility for any illegal activities carried out with it, and the code is made public for viewing purposes only. Please use this ethically and responsibly.
+
+# Note
 Do not DM me for help, I will ignore you and block you. I cannot explain on how to use it better than I already have.
